@@ -24,8 +24,8 @@ st.set_page_config(
 
 def search_images(query):
     # You need to provide your Custom Search Engine (CX) ID and API key
-    cx = 'c567825322ab0463f'
-    api_key = 'AIzaSyAAIfKsDhAXtL74w-oOnTm7OpJZM4twC5c'
+    cx = 'cx_id'
+    api_key = 'api_key'
     url = f"https://www.googleapis.com/customsearch/v1?q={query}&cx={cx}&imgSize=large&num=5&searchType=image&key={api_key}"
     response = requests.get(url)
     search_results = response.json()
@@ -33,7 +33,7 @@ def search_images(query):
     return images
 
 # Initialize the Google Maps client with your API key
-gmaps = googlemaps.Client(key='AIzaSyDPY3arhqaU-G9V7fIeDB0kdcsT6p7hvVA')
+gmaps = googlemaps.Client(key='maps_api_key')
 
 
 
